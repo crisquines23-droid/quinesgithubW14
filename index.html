@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aling challey Karinderya | Menu</title>
+    <style>
+        /* --- CSS STYLING --- */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Permanent+Marker&display=swap');
+
+        :root {
+            --primary-orange: #e67e22;
+            --chalk-white: #ffffff;
+            --board-black: #1c1c1c;
+            --price-green: #2ecc71;
+            --wood-brown: #5d4037;
+        }
+
+        body {
+            background-color: #f0e2d0; 
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .menu-container {
+            background-color: var(--board-black);
+            color: var(--chalk-white);
+            max-width: 450px;
+            width: 100%;
+            padding: 40px;
+            border: 12px solid var(--wood-brown);
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2.2rem;
+            margin: 0;
+            color: var(--primary-orange);
+            text-shadow: 2px 2px #000;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            color: #bdc3c7;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu-category h2 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.5rem;
+            color: #f1c40f; 
+            margin-top: 35px;
+            margin-bottom: 10px;
+            border-left: 5px solid var(--primary-orange);
+            padding-left: 12px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            padding-left: 10px;
+        }
+
+        .dish-name {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .price {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: var(--price-green);
+            background: rgba(46, 204, 113, 0.1);
+            padding: 2px 10px;
+            border-radius: 4px;
+        }
+
+        /* Status Classes */
+        .best-seller .dish-name::after {
+            content: "🔥 POPULAR";
+            font-size: 0.6rem;
+            background: #e74c3c;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 10px;
+            margin-left: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .sold-out {
+            opacity: 0.3;
+            filter: grayscale(1);
+        }
+
+        .sold-out .price {
+            color: #e74c3c;
+            text-decoration: line-through;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <header>
+            <h1>ALING CHALLEY</h1>
+            <p class="tagline">Authentic Lutong Bahay</p>
+        </header>
+
+        <section class="menu-category">
+            <h2>Karne (Meat)</h2>
+            <div class="item best-seller">
+                <span class="dish-name">Pork Adobo</span>
+                <span class="price">₱65.00</span>
+            </div>
+            <div class="item">
+                <span class="dish-name">Beef Caldereta</span>
+                <span class="price">₱90.00</span>
+            </div>
+            <div class="item sold-out">
+                <span class="dish-name">Lechon Paksiw</span>
+                <span class="price">UBOS NA</span>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <h2>Gulay (Veggie)</h2>
+            <div class="item">
+                <span class="dish-name">Ginisang Monggo</span>
+                <span class="price">₱35.00</span>
+            </div>
+            <div class="item">
+                <span class="dish-name">Pinakbet</span>
+                <span class="price">₱45.00</span>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <h2>Extras</h2>
+            <div class="item">
+                <span class="dish-name">Extra Rice</span>
+                <span class="price">₱15.00</span>
+            </div>
+            <div class="item">
+                <span class="dish-name">Coke / Royal</span>
+                <span class="price">₱20.00</span>
+            </div>
+        </section>
+
+        <footer>
+            <p> Kanto Street, Brgy. Lacson Manila</p>
+            <p>Open: 7:00 AM - 3:00 PM</p>
+        </footer>
+    </div>
+
+</body>
+</html>
